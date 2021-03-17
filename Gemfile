@@ -25,7 +25,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'binding_of_caller', '~> 1.0'
+gem 'bulma-rails', '~> 0.6.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'simple_form', '~> 5.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -41,6 +45,10 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'guard', '~> 2.16', '>= 2.16.2'
+  gem 'guard-bundler'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
