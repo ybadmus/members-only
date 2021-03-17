@@ -17,13 +17,17 @@
   <div class="box">
   	<article class="media">
   		<div class="media-left">
-  			<figure class="image is-64x64">
-  				<%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.email) %>
-  			</figure>
+        <% if user_signed_in? %>
+  			  <figure class="image is-64x64">
+  				  <%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.email) %>
+  			  </figure>
+        <% end %>
   		</div>
   		<div class="media-content">
   			<div class="content">
-  				<strong><%= post.user.email %></strong><br />
+          <% if user_signed_in? %>
+  				  <strong><%= post.user.email %></strong><br />
+          <% end %>
   				<p><%= post.post %></p>
   			</div>
         <% if user_signed_in? && current_user.id == post.user_id %>
