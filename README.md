@@ -1,14 +1,13 @@
-# Project Name
-Members Only
+# Members Only
 
-We used rails to create an application that:
-- allow members to write anonymous posts
-- allow a member to can see the author of a post
-- does not allow a non-member to see the author of a post
+In this project, you’ll be building an exclusive clubhouse where your members can write anonymous posts. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
 ## Built With
 
-- Rails
+- Ruby on Rails
+- Using Linters for Ruby and Stylelint
+- Git, GitHub
+- Using Bundler
 
 ## Getting Started
 
@@ -16,9 +15,7 @@ To run this application locally, you will need to have:
 
 - Ruby version 2.7 and above
 - Rails installed
-- Yarn installed
-- Gems installed
-- Devise added to your Gemfile and installed
+- Yarn & NPM installed
 - A terminal
 
 Once you have all the above listed:
@@ -26,9 +23,14 @@ Once you have all the above listed:
 - Create a clone of this repository. 
   - In your terminal type 'git clone https://github.com/ybadmus/members-only.git'
   - From your terminal move into the cloned repository folder by using the 'cd' command 
-- In your terminal type 'rails server' to run your server.
-- In your browser, navigate to your localhost: 'http://localhost:3000'.
-
+- run `yarn install` 
+- run `npm install`
+- run `rails webpacker:install`
+- run `bundle install`
+- run `rails db: migrate` to migrate the database 
+- run `rails server`
+- Go to `http://localhost:3000` on your browser to view the homepage of the application 
+- FinaLly run `rails console` to inspect the structure of the database and the data you stored.
 
 ## Authors
 

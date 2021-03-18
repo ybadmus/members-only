@@ -2,7 +2,8 @@
 
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  before_action :authenticate_user!, only: %i[new create]
+  before_action :authenticate_user!, except: %i[index show]
+  before_action :require_login, only: [:new, :create]
 
   # GET /posts or /posts.json
   def index
@@ -68,5 +69,15 @@ class PostsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def post_params
     params.require(:post).permit(:post, :text, :user_id, :integer)
+  end
+
+  def require_login
+    if user_signed_in?
+      true
+    else
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to new_user_path 
+      false
+    end
   end
 end
