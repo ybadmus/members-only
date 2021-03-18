@@ -55,3 +55,16 @@ Feel free to check the [issues page](https://github.com/ybadmus/members-only/iss
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org)
+- [Rails-Doc](https://guides.rubyonrails.org/)
+- [Odin-Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-with-active-record-ruby-on-rails)
+- Our standup teams
+
+## 📝 License
+
+<p>This project is <a href="LICENSE">MIT</a> licensed.</p>
+
+## Enjoy!
