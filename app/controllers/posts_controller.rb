@@ -3,7 +3,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
-  before_action :require_login, only: [:new, :create]
+  before_action :require_login, only: %i[new create]
 
   # GET /posts or /posts.json
   def index
@@ -75,8 +75,8 @@ class PostsController < ApplicationController
     if user_signed_in?
       true
     else
-      flash[:alert] = "You must be logged in to access this section"
-      redirect_to new_user_path 
+      flash[:alert] = 'You must be logged in to access this section'
+      redirect_to new_user_path
       false
     end
   end
